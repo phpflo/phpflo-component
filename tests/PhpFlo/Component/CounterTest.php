@@ -29,7 +29,7 @@ class CounterTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($counter->outPorts()->has('count'));
 
         $counter->appendCount(1);
-        $counter->appendCount(2);
+        $counter->appendCount("2");
         $counter->appendCount(null);
 
         $counter->sendCount();
