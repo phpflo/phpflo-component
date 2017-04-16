@@ -9,7 +9,7 @@ declare(strict_types=1);
  * file that was distributed with this source code.
  */
 
-namespace Tests\PhpFlo\Component;
+namespace PhpFlo\Component\Tests;
 
 use PhpFlo\Component\Counter;
 use PhpFlo\Test\ComponentTestHelperTrait;

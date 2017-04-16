@@ -1,8 +1,8 @@
 <?php
 
-namespace Tests\PhpFlo\Component;
+namespace PhpFlo\Component\Tests;
 
-use PhpFlo\Network;
+use PhpFlo\Core\Network;
 
 class QueueTest extends \PHPUnit_Framework_TestCase
 {

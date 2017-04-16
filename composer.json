@@ -17,17 +17,11 @@
   ],
   "require": { "php": ">=7.0.0" },
   "require-dev": {
-    "phpflo/phpflo": "^2.0.0",
+    "phpflo/phpflo": "^2.1.0",
     "phpunit/phpunit": "^5.0"
   },
   "autoload": {
-    "psr-4": {
-      "PhpFlo\\": "lib/PhpFlo/",
-      "Test\\": "lib/Test/"
-    }
+    "psr-4": { "PhpFlo\\Component\\": "lib/PhpFlo/Component/" }
   },
-  "config": { "bin-dir": "bin" },
-  "autoload-dev": {
-    "psr-4": { "Tests\\": "tests/" }
-  }
+  "config": { "bin-dir": "bin" }
 }
