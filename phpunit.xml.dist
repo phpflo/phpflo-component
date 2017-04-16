@@ -14,15 +14,15 @@
 >
     <testsuites>
         <testsuite name="PhpFlo Component Test Suite">
-            <directory>Tests</directory>
+            <directory>src/Tests</directory>
         </testsuite>
     </testsuites>
     <filter>
         <whitelist>
             <directory>.</directory>
             <exclude>
-                <directory>Tests</directory>
-                <directory>Test</directory>
+                <directory>src/Tests</directory>
+                <directory>src/Test</directory>
                 <directory>bin</directory>
                 <directory>vendor</directory>
             </exclude>

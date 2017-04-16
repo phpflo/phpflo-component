@@ -21,7 +21,7 @@
     "phpunit/phpunit": "^5.0"
   },
   "autoload": {
-    "psr-4": { "PhpFlo\\Component\\": "lib/PhpFlo/Component/" }
+    "psr-4": { "PhpFlo\\Component\\": "src/" }
   },
   "config": { "bin-dir": "bin" }
 }
