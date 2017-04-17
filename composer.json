@@ -15,9 +15,12 @@
       "email": "maschmann@gmail.com"
     }
   ],
-  "require": { "php": ">=7.0.0" },
+  "require": {
+    "php": ">=7.0.0",
+    "phpflo/phpflo": "^2.1.0"
+  },
   "require-dev": {
-    "phpflo/phpflo": "^2.1.0",
+
     "phpunit/phpunit": "^5.0"
   },
   "autoload": {
