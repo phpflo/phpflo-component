@@ -2,9 +2,10 @@
 
 namespace PhpFlo\Component\Tests;
 
+use PhpFlo\Component\Test\TestCase;
 use PhpFlo\Core\Network;
 
-class QueueTest extends \PHPUnit_Framework_TestCase
+class QueueTest extends TestCase
 {
     public function testNoMessageIsForwardedWhileQueueSizeIsNotReached()
     {

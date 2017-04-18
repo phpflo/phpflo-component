@@ -12,14 +12,10 @@ declare(strict_types=1);
 namespace PhpFlo\Component\Tests;
 
 use PhpFlo\Component\Counter;
-use PhpFlo\Test\ComponentTestHelperTrait;
-use PhpFlo\Test\StubTrait;
+use PhpFlo\Component\Test\TestCase;
 
-class CounterTest extends \PHPUnit_Framework_TestCase
+class CounterTest extends TestCase
 {
-    use StubTrait;
-    use ComponentTestHelperTrait;
-
     public function testBehavior()
     {
         $counter = new Counter();
