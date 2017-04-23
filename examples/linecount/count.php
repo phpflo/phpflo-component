@@ -38,5 +38,5 @@ $builder = new PhpFlo\Core\Builder\ComponentFactory();
 //echo $graph->toJson();
 
 // Make the graph "live"
-$network = new PhpFlo\Network($builder);
+$network = new PhpFlo\Core\Network($builder);
 $network->boot($graph);
