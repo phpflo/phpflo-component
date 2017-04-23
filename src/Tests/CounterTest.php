@@ -16,19 +16,48 @@ use PhpFlo\Component\Test\TestCase;
 
 class CounterTest extends TestCase
 {
-    public function testBehavior()
+    /** @var Counter */
+    private $component;
+
+    public function setUp()
     {
-        $counter = new Counter();
-        $this->connectPorts($counter);
+        $this->component = new Counter();
+        $this->connectPorts($this->component);
+    }
 
-        $this->assertTrue($counter->inPorts()->has('in'));
-        $this->assertTrue($counter->outPorts()->has('count'));
+    public function testPorts()
+    {
+        $this->assertTrue($this->component->inPorts()->has('in'));
+        $this->assertTrue($this->component->outPorts()->has('count'));
+    }
 
-        $counter->appendCount(1);
-        $counter->appendCount(2);
-        $counter->appendCount(null);
+    public function testBasicAppendCountWithInitialEmpty()
+    {
+        $this->component->appendCount(1);
+        $this->component->sendCount();
 
-        $counter->sendCount();
+        $countData = $this->getOutPortData('count');
+        $this->assertEquals(1, $countData[0]);
+
+        $this->assertTrue($this->wasCalled('count'));
+    }
+
+    public function testAppendTwoValues()
+    {
+        $this->component->appendCount(1);
+        $this->component->appendCount(2); // value of count is irrelevant
+        $this->component->sendCount();
+
+        $countData = $this->getOutPortData('count');
+        $this->assertEquals(2, $countData[0]);
+    }
+
+    public function testAppendNullValue()
+    {
+        $this->component->appendCount(1);
+        $this->component->appendCount(2);
+        $this->component->appendCount(null);
+        $this->component->sendCount();
 
         $countData = $this->getOutPortData('count');
         $this->assertEquals(3, $countData[0]);
